@@ -1,0 +1,192 @@
+:root {
+    --black: #313131;
+    --text-color: #676767;
+    --white: #fff;
+    --box-shadow: .4rem .4rem 1rem #ccc,
+        -.4rem -.4rem 1rem #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s ease-in;
+    -webkit-transition: 0.4s ease-in;
+    -moz-transition: 0.4s ease-in;
+    -ms-transition: 0.4s ease-in;
+    -o-transition: 0.4s ease-in;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    padding: 0 !important;
+    list-style: none;
+    margin: 0;
+}
+
+body {
+    background-color: var(--white);
+}
+::selection{
+    background-color: #89D32A;
+    color: var(--white);
+}
+
+
+// all section header start
+.section_header_container {
+    padding: 100px 0px 60px 0;
+
+    .header_mini_txt {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        color: #89D32A;
+
+        #header_line {
+            stroke: var(--black);
+        }
+    }
+
+    .mainheader {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 48px;
+        /* identical to box height, or 120% */
+
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        /* Primary Color */
+        color: var(--black);
+
+    }
+
+    .header_txt {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+
+        text-align: center;
+        color: var(--text-color);
+    }
+}
+
+// all section header end
+
+// nav fix
+.navdown {
+    position: fixed;
+    border-bottom: 1px solid var(--black);
+    top: 0;
+    width: 100%;
+    z-index: 999999999;
+    background-color: var(--white) !important;
+  animation: navbar 1s ease-in;
+  -webkit-animation: navbar 1s ease-in;
+}
+
+@keyframes navbar {
+  from {
+      top: -100px;
+  }
+
+  to {
+      top: 0;
+  }
+}
+
+/* backtop btn */
+.backtop {
+    position: fixed !important;
+    right: 50px;
+    animation: bktop 5s ease-in infinite;
+  -webkit-animation: bktop 5s ease-in infinite;
+    width: 50px;
+    height: 50px;
+    background-color: #89D32A;
+    box-shadow: var(--box-shadow);
+    z-index: 99999;
+    bottom: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    @keyframes bktop {
+        10% {
+          bottom: 90px;
+          right: 50px;
+        }
+        20% {
+          bottom: 100px;
+          right: 50px;
+        }
+        30% {
+          bottom: 90px;
+          right: 50px;
+        }
+        40% {
+          bottom: 100px;
+          right: 50px;
+        }
+        50% {
+          bottom: 90px;
+          right: 50px;
+        }
+        60% {
+          bottom: 100px;
+          right: 50px;
+        }
+        70% {
+          bottom: 90px;
+          right: 50px;
+        }
+        80% {
+          bottom: 100px;
+          right: 50px;
+        }
+        90% {
+          bottom: 90px;
+          right: 50px;
+        }
+        100% {
+          bottom: 100px;
+          right: 50px;
+        }
+      }
+      
+}
+  
+  .backtop i {
+    position: absolute;
+    font-size: 25px;
+    color: var(--white);
+    top: 50%;
+    left: 50%;
+    color: var(--white);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+  
+  /* backtop btn */
